@@ -1,0 +1,60 @@
+/*
+ * Navigations
+ */
+
+.polls-pagination .page-item .pagination-link.left-arrow {
+  padding: 0 1rem;
+  margin-right: 15px;
+  font-size: 2rem;
+  border-radius: 100%;
+
+}
+
+.polls-pagination .page-item .pagination-link.right-arrow {
+  padding: 0 1rem;
+  margin-left: 15px;
+  font-size: 2rem;
+  border-radius: 100%;
+}
+
+.polls-pagination .pagination-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #6b6b6e;
+  background-color: #e9f0f7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.polls-pagination .page-item.center .pagination-link {
+  padding: 0.75rem 1rem;
+}
+
+.polls-pagination .page-item.active span {
+  background: #469cff;
+  color: white;
+}
+
+.polls-pagination .pagination-link:hover {
+  background: #469cff;
+  color: white;
+}
+
+.polls-pagination .page-item.disabled .pagination-link:hover {
+  color: #6b6b6e;
+  background-color: #e9f0f7;
+  cursor: not-allowed;
+}
+
+.polls-pagination .page-item:nth-child(2) .pagination-link {
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+
+.polls-pagination .page-item:nth-last-child(2) .pagination-link {
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}

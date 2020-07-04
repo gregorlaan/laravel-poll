@@ -1,0 +1,54 @@
+/*
+ * Forms and Inputs
+ */
+ 
+  .focus-light-blue {
+    border: 2px solid transparent;
+  }
+
+  .focus-light-blue:focus {
+    border-color: $light-blue;
+  }
+
+  .bg-light-gray {
+    background-color: $light-gray;
+  }
+
+  .bg-light-blue {
+    background-color: $light-blue;
+  }
+
+  .choice-label {
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+
+  input.choice-selection:checked + label.choice-label {
+    border-color: $light-blue;
+  }
+
+  label.choice-label span::selection { 
+    background: transparent; 
+  }
+
+  label.choice-label span::-moz-selection { 
+    background: transparent; 
+  }
+
+  .choice-label:before {
+    content: '';
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-image: url('storage/assets/icons/circle.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: bottom;
+  }
+
+  input.choice-selection:checked + label.choice-label:before,
+  .choice-label:hover:before {
+    background-image: url('storage/assets/icons/check-circle.svg');
+  }
+
+   
