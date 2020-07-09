@@ -19,6 +19,8 @@ class CreatePollsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->text('name');
             $table->timestamps();
+
+            $table->index('user_id');
         });
     }
 

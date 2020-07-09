@@ -14,7 +14,8 @@ class DashboardController extends Controller
 
     public function index()
     {
-        $polls = Poll::latest()->paginate(5);
+        $user = auth()->user();
+        $polls = Poll::where('user_id', $user->id)->paginate(5);
 
         return view('dashboard', compact('polls'));
     }
