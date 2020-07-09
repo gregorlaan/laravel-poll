@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Validator;
 
 class PollController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index', 'show']);
+    }
+
     public function show(Poll $poll)
     {
         return view('poll.show', compact('poll'));
