@@ -9,6 +9,12 @@
     <form action="/poll" enctype="multipart/form-data" method="post" autocomplete="false">
         @csrf
 
+        @error('choices')
+            <div class="alert alert-danger" role="alert">
+                {{ $message }}
+            </div>
+        @enderror
+
         <div class="form-group">
             <label for="poll-name">
                 <small class="form-text text-muted">Title</small>
@@ -47,17 +53,11 @@
             </label>
             
             <input type="text"
-                class="form-control form-control-lg focus-light-blue bg-light-gray light-shadow @error('choices.0') is-invalid @enderror" 
-                name="choices.choice-1" 
+                class="form-control form-control-lg focus-light-blue bg-light-gray light-shadow" 
+                name="choices[]" 
                 id="choice-1" 
                 placeholder="Option 1"
             >
-        
-            @error('choices.0')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
         </div>
 
         <div class="form-group">
@@ -66,7 +66,7 @@
             </label>
             
             <input type="text"
-                class="form-control form-control-lg focus-light-blue bg-light-gray light-shadow" name="choices.choice-2" id="choice-2" placeholder="Option 2">
+                class="form-control form-control-lg focus-light-blue bg-light-gray light-shadow" name="choices[]" id="choice-2" placeholder="Option 2">
         </div>
 
         <div class="form-group">
@@ -75,7 +75,7 @@
             </label>
             
             <input type="text"
-                class="form-control form-control-lg focus-light-blue bg-light-gray light-shadow" name="choices.choice-3" id="choice-3" placeholder="Option 3">
+                class="form-control form-control-lg focus-light-blue bg-light-gray light-shadow" name="choices[]" id="choice-3" placeholder="Option 3">
         </div>
 
         <button type="submit" class="btn btn-primary btn-lg px-4 bg-light-blue">Publish</button>

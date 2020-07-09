@@ -46,11 +46,11 @@ class PollController extends Controller
         $rules = [
             'poll-name' => 'required',
             'question-name' => 'required',
-            'choices.0' => 'required',
+            'choices' => 'required|min:1',
         ];
 
         $messages = [
-            'choices.0.required' => 'At least one choice is required',
+            'choices.required' => 'At least one choice is required',
         ];
 
         $attributes = [
