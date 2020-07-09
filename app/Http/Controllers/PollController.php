@@ -34,7 +34,7 @@ class PollController extends Controller
 
     public function edit(Poll $poll)
     {
-        //$this->authorize('update', $post);
+        $this->authorize('update', $poll);
 
         return view('poll.edit', compact('poll'));
     }
@@ -70,6 +70,7 @@ class PollController extends Controller
         {
             $poll = new Poll();
             $poll->name = $input['poll-name'];
+            $poll->user_id = auth()->user()->id;
             
             $question = new Question();
             $question->name = $input['question-name'];
@@ -93,6 +94,7 @@ class PollController extends Controller
 
     public function update(Poll $poll)
     {
+        $this->authorize('update', $poll);
         // TODO: Have to limit choices
         $input = request()->all();
 
