@@ -26,4 +26,6 @@ Route::get('/poll/{poll}/edit', 'PollController@edit');
 Route::post('/poll', 'PollController@store');
 Route::get('/poll/{poll}', 'PollController@show');
 
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
 Route::get('/home', 'HomeController@index')->name('home');
