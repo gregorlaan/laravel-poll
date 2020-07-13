@@ -10985,6 +10985,15 @@ input.choice-selection:checked + label.choice-label:before,
   background-image: url(/images/check-circle.svg?9bbc62beec400496d5ac9e2cdd810ee8);
 }
 
+.section-title span::after {
+  content: "";
+  background: #469cff;
+  height: 2px;
+  width: 30px;
+  display: block;
+  margin-top: 5px;
+}
+
 /*
  * Navigations
  */
@@ -11113,17 +11122,27 @@ nav.main.navbar {
   color: #999;
 }
 
-.sidebar .nav-link.active {
+.sidebar li.active .nav-link,
+.sidebar .toggle-link:hover svg {
   color: #007bff;
 }
 
 .sidebar .nav-link:hover .feather,
-.sidebar .nav-link.active .feather {
+.sidebar li.active .nav-link .feather {
   color: inherit;
 }
 
-.sidebar-heading {
+.sidebar .sidebar-heading {
   font-size: 0.75rem;
   text-transform: uppercase;
+}
+
+.sidebar .sidebar-heading span::after {
+  content: "";
+  background: #469cff;
+  height: 2px;
+  width: 15px;
+  display: block;
+  margin-top: 5px;
 }
 

@@ -28,4 +28,6 @@ Route::get('/poll/{poll}', 'PollController@show');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
+Route::get('/sidebar/toggle/latestPolls', 'SidebarController@toggleAuthUserLatestPolls')->name('toggle.latestPolls');
+
 Route::get('/home', 'HomeController@index')->name('home');

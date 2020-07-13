@@ -3,7 +3,9 @@
 @section('content')
 <div class="container">
 
-    <h2 class="mb-4">My Polls</h2>
+    <h2 class="mb-4 section-title">
+        <span>My Polls</span>
+    </h2>
 
     @foreach($polls as $poll)
 

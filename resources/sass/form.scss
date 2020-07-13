@@ -51,4 +51,11 @@
     background-image: url('storage/assets/icons/check-circle.svg');
   }
 
-   
+  .section-title span::after {
+    content: '';
+    background: #469cff;
+    height: 2px;
+    width: 30px;
+    display: block;
+    margin-top: 5px;
+}
