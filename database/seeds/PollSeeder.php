@@ -20,24 +20,3 @@ class PollSeeder extends Seeder
         });
     }
 }
-
-/* 
-$poll = new Poll();
-$poll->name = $input['poll-name'];
-
-$question = new Question();
-$question->name = $input['question-name'];
-
-$poll->save();
-$poll->question()->save($question);
-
-foreach($input['choices'] as $choice_name)
-{
-    if(!$choice_name)
-        continue;
-
-    $choice = new Choice();
-    $choice->name = $choice_name;
-    $question->choices()->save($choice);
-}
- */
